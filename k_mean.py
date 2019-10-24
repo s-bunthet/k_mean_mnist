@@ -64,8 +64,8 @@ def train():
             if train_data[i, -1] in labels_array:
                 init_centroids.append(train_data[i, np.arange(train_data.shape[1]-1)])
                 labels_array = np.delete(labels_array, np.argwhere(labels_array == train_data[i, -1]))
-            if labels_array.shape[0] == 0:
-                break
+                if labels_array.shape[0] == 0:
+                    break
         k_mean = KMeans(n_clusters=args.n, init=np.array(init_centroids),
                         verbose=args.vb, n_jobs=args.n_jobs, algorithm=args.algo,
                         max_iter=args.max_iter)
