@@ -37,5 +37,14 @@ optional arguments:
 
 ```
 ## Result
-[TODO]
-+ Show the confusion matrix and accuracy of the best training arguments 
+With the default arguments of the parameters, the model have 78% accuracy and the following confusion matrix.
+```
+Training time: 1.1831 seconds.
+Arguments used for training:  {'vb': 0, 'init': 'k-means++', 'n': 10, 'n_init': 10, 'n_jobs': 2, 'algo': 'auto', 'max_iter': 300}
+Prediction time: 0.0037 seconds
+Accuracy: 0.7784
+
+```
+
+![](imgs/confusion_matrix.png)
+
